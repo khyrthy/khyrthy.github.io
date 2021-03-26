@@ -1,0 +1,144 @@
+@keyframes nav-element-hover{0%{height: 50px;} 100%{height: 55px;}}
+@keyframes nav-element-normal{100%{height: 50px;} 0%{height: 55px;}}
+@keyframes banner{0%{height: 0px;} 100%{height: 200px;}}
+@keyframes body {0%{opacity: 0; color: rgba(0, 0, 0, 0)}50%{opacity: 1; color: rgba(0, 0, 0, 0)} 100%{opacity: 1; color: auto}}
+@keyframes header{0%{opacity: 0; height: 0px}; 100%{opacity: 1; height: initial}}
+@keyframes link{0%{color:rgba(0, 0, 0, 0)} 50%{color:rgba(0, 0, 0, 0)} 100%{color: orangered}}
+
+html{
+    margin: 0px;
+    padding: 0px;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+} html::-webkit-scrollbar {display: none;}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background: rgb(170,244,224);
+
+    margin: 0px;
+    padding: 0px;
+
+}
+
+header {
+    animation: header 1s;
+    -webkit-animation: header 1s;
+
+    background-color: rgb(39, 39, 39);
+    color: white;
+
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 90px;
+
+    position: sticky;
+    top: 0px;
+
+    box-shadow: 0px 0px 10px rgba(56, 56, 56, 0.678);
+
+    z-index: 4;
+
+}
+
+#profile {
+    height: 75px;
+}
+
+#banner{
+
+    animation: banner 1s;
+    -webkit-animation: banner 1s;
+
+    height: 200px;
+
+    display: block;
+        
+    position: sticky;
+    top: 110px;
+
+}
+
+
+nav {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin: 15px;
+
+
+}
+
+.link_image {
+
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+
+    animation: nav-element-normal 1s;
+    -webkit-animation: nav-element-normal 1s;
+
+} .link_image:hover{
+    height: 55px;
+
+    animation: nav-element-hover 1s;
+    -webkit-animation: nav-element-hover 1s;
+}
+
+#body {
+
+    animation: body 2s;
+    -webkit-animation: body 2s;
+
+    z-index: 2;
+    position: relative;
+    padding: 20px;
+
+    background-color: white;
+
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 0px 10px rgba(56, 56, 56, 0.678);
+
+}
+
+a {
+    animation: link 2s;
+    animation-iteration-count: 1;
+    -webkit-animation: link 2s;
+    -webkit-animation-iteration-count: 1;
+    
+    text-decoration: none;
+    color: orangered
+} a:hover {color: red;}
+
+footer {
+
+    z-index: 3;
+    position: relative;
+
+    background-color:rgb(39, 39, 39);
+    
+    color: white;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(56, 56, 56, 0.678);
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    
+    display: table;
+    width: 100%;
+
+
+}
