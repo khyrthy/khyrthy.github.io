@@ -1,5 +1,5 @@
-@keyframes nav-element-hover{0%{height: 50px;} 100%{height: 55px;}}
-@keyframes nav-element-normal{100%{height: 50px;} 0%{height: 55px;}}
+@keyframes nav-element-hover{0%{height: 50px; margin-left: 5px; margin-right: 5px} 50%{height: 50px; margin-left: 10px; margin-right: 10px} 100%{height: 60px; margin-left: 5px; margin-right: 5px;}}
+@keyframes nav-element-normal{100%{height: 50px; margin-left: 5px; margin-right: 5px} 50%{height: 50px; margin-left: 10px; margin-right: 10px} 0%{height: 60px; margin-left: 5px; margin-right: 5px;}}
 @keyframes banner{0%{height: 0px;} 100%{height: 200px;}}
 @keyframes body {0%{opacity: 0; color: rgba(0, 0, 0, 0)}50%{opacity: 1; color: rgba(0, 0, 0, 0)} 100%{opacity: 1; color: auto}}
 @keyframes header{0%{opacity: 0; height: 0px}; 100%{opacity: 1; height: initial}}
@@ -94,7 +94,7 @@ nav {
     -webkit-animation: nav-element-normal 1s;
 
 } .link_image:hover{
-    height: 55px;
+    height: 60px;
 
     animation: nav-element-hover 1s;
     -webkit-animation: nav-element-hover 1s;
