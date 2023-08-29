@@ -1,0 +1,217 @@
+html, body, * {
+    scroll-behavior: smooth;
+}
+
+html, body {
+
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0; padding: 0;
+
+    display: flex;
+    flex-direction: row;
+
+    overflow-x: hidden;
+
+    background-color: rgb(25, 25, 25);
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    color: white;
+    font-family: "Work Sans";
+}
+
+
+header {
+    width: calc(50vw - 400px);
+    padding: 200px;
+    overflow-y: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    position: sticky;
+    top: 0px;
+    left: 0px;
+
+}
+
+#profile {
+
+    height: 250px;
+    width: 250px;
+
+    border-radius: 25px;
+
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+}
+
+#profile:hover {
+
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
+}
+
+#main {
+
+    margin: 0; padding: 0;
+    line-height: 0.8em;
+
+    font-family: "Kanit";
+    font-size: 4em;
+}
+
+#sub {
+
+    margin: 0; padding: 0;
+    font-family: "Work Sans";
+
+}
+
+nav {
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.nav {
+    font-family: "Work Sans";
+    color: lightgray;
+    text-decoration: none;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.nav:hover {
+    padding-left: 5px;
+    color: white;
+}
+
+.nav::before {
+    content: "· ";
+}
+
+#body {
+
+    padding: 100px;
+    width: calc(50vw - 200px);
+
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+#body::-webkit-scrollbar {
+    display: none;
+}
+
+#body::after {
+
+    content: "";
+
+    position: absolute;
+    left: 50vw;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    background: linear-gradient(180deg, rgba(25,25,25,0) 90%, rgba(25,25,25,1) 100%);
+
+
+}
+
+h1 {
+    font-family: "Kanit";
+    font-size: 3em;
+
+    padding: 0;
+    margin: 5px 0px 5px 0px;
+
+}
+
+p {
+    font-family: "Work Sans";
+    font-size: 1.5em;
+}
+
+tr {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+}
+
+td {
+
+    padding: 0px 10px 0px 10px;
+}
+
+#project-viewport {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.project {
+
+    position: relative;
+    z-index: 2;
+
+
+    display: block;
+    text-decoration: none;
+
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+
+}
+
+.project:hover {
+    background-color: rgb(20, 20, 20);
+}
+
+.project-title {
+    padding: 0; margin: 0;
+    margin-bottom: 10px;
+}
+
+.project-desc {
+    font-size: 1em;
+    padding: 0; margin: 0;
+}
+
+a {
+    display: inline;
+}
+
+#github {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#github-img {
+    width: 35px;
+    padding: 20px;
+
+    filter: opacity(0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+#github-img:hover {
+    filter: opacity(1);
+}
