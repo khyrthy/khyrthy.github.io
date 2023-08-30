@@ -1,3 +1,12 @@
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
 html, body, * {
     scroll-behavior: smooth;
 }
@@ -17,8 +26,7 @@ html, body {
 
     background-color: rgb(25, 25, 25);
 
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    
 }
 
 body::-webkit-scrollbar {
@@ -32,8 +40,8 @@ body::-webkit-scrollbar {
 
 
 header {
-    width: calc(50vw - 400px);
-    padding: 200px;
+
+
     overflow-y: hidden;
 
     display: flex;
@@ -44,6 +52,9 @@ header {
     position: sticky;
     top: 0px;
     left: 0px;
+
+    overflow-x: hidden;
+
 
 }
 
@@ -107,7 +118,6 @@ nav {
 #body {
 
     padding: 100px;
-    width: calc(50vw - 200px);
 
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -214,4 +224,70 @@ a {
 
 #github-img:hover {
     filter: opacity(1);
+}
+
+.wrapper {
+
+    padding: 0;
+    margin: 0;
+
+    width: 50vw;
+    height: 100vh;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+@media screen and (max-width: 1190px) {
+
+    html, body {
+        flex-direction: column;
+    }
+ 
+    .wrapper {
+        width: 100vw;
+        min-height: 100vh;
+
+        overflow-y: visible;
+        overflow-x: visible;
+    }
+
+    header {
+        position: static;
+    }
+
+    #body {
+        min-height: 100vh;
+        overflow-y: visible;        
+    }
+
+ 
+}
+
+@media screen and (orientation: portrait) {
+
+    #profile {
+        height: 250px;
+        width: 250px;
+    }
+
+    #main {
+        font-size: 3em;
+    }
+
+    #sub {
+        font-size: 1.2em;
+    }
+
+    .nav {
+        font-size: 1.3em;
+    }
+
 }
